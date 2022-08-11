@@ -1,0 +1,128 @@
+{
+  "Auth": {
+    "email": {
+      "type": "text",
+      "class": "email",
+      "required": true,
+      "validate": null,
+      "value": null
+    },
+    "password": {
+      "type": "password",
+      "class": "password",
+      "required": true,
+      "validate": null,
+      "value": null
+    }
+  },
+  "Registration": {
+    "name": {
+      "type": "text",
+      "class": "name",
+      "required": true,
+      "validate": null,
+      "value": null
+    },
+    "email": {
+      "type": "text",
+      "class": "email",
+      "required": true,
+      "validate": null,
+      "value": null
+    },
+    "password": {
+      "type": "password",
+      "class": "password",
+      "required": true,
+      "validate": null,
+      "value": null
+    }
+  },
+  "Recovery": {
+    "email": {
+      "type": "text",
+      "class": "email",
+      "required": true,
+      "validate": null,
+      "value": null
+    }
+  },
+  "Profile": {
+    "user": {
+      "surname": {
+        "type": "text",
+        "class": "surname",
+        "required": false,
+        "validate": null,
+        "value": null
+      },
+      "name": {
+        "type": "text",
+        "class": "name",
+        "required": true,
+        "validate": null,
+        "value": null
+      },
+      "middlename": {
+        "type": "text",
+        "class": "middlename",
+        "required": false,
+        "validate": null,
+        "value": null
+      }
+    },
+    "contacts": {
+      "email": {
+        "type": "text",
+        "class": "email",
+        "required": true,
+        "validate": null,
+        "value": null
+      },
+      "phone": {
+        "type": "text",
+        "class": "phone",
+        "required": false,
+        "validate": null,
+        "value": null
+      }
+    },
+    "password": {
+      "old": {
+        "type": "password",
+        "class": "old",
+        "required": false,
+        "validate": null,
+        "value": null
+      },
+      "new": {
+        "type": "password",
+        "class": "new",
+        "required": false,
+        "validate": null,
+        "value": null
+      }
+    }
+  },
+  "Company": {
+    "main": {
+      "name": {
+        "type": "text",
+        "class": "name",
+        "required": true,
+        "validate": null,
+        "value": null
+      },
+      "web": {
+        "type": "text",
+        "class": "web",
+        "required": false,
+        "validate": null,
+        "value": null
+      }
+    },
+    "types": {
+      "list": []
+    }
+  }
+}

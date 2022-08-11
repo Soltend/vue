@@ -1,0 +1,22 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  &__wrapper {
+    @include glass();
+    padding: 40px 40px 30px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+}

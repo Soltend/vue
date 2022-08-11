@@ -1,0 +1,20 @@
+.auth {
+  @include glass();
+  position: relative;
+  padding: 40px 40px 30px;
+  width: 100%;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__notification {
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 0;
+  }
+}
+
+.auth-title {
+  text-transform: uppercase;
+}

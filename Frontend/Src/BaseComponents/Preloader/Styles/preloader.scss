@@ -1,0 +1,18 @@
+@import './keyframes';
+
+.preloader {
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+  &__spinner {
+    height: 32px;
+    width: 32px;
+    background: url('~Assets/Icons/Preloader/spinner.svg') top left/contain no-repeat;
+    animation: rotation 1.4s infinite linear;
+  }
+}

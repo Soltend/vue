@@ -1,0 +1,11 @@
+body {
+  position: relative;
+  background: var(--default-background);
+  color: var(--color-black);
+  font-family: var(--default-font-family);
+  font-size: var(--default-font-size);
+  line-height: var(--default-line-height);
+  letter-spacing: var(--default-letter-spacing);
+  display: flex;
+  flex-direction: column;
+}

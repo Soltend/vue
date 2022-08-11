@@ -1,0 +1,60 @@
+.table {
+  $self: &;
+
+  @include glass();
+  padding: 30px 30px;
+
+  &__wrapper {
+    padding-right: 15px;
+    width: calc(100% + 15px);
+    max-height: 600px;
+
+    &--top {
+      padding-right: 15px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--default-radius);
+    transition: background-color 0.2s ease-in;
+
+
+    &:nth-child(2n) {
+      background-color: var(--color-light-grey);
+    }
+
+    &--caption {
+      background-color: rgb(251, 233, 233);
+
+      #{$self}__text {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__column {
+    padding: 15px 20px;
+    width: 18%;
+
+    &--actions {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0;
+      padding-left: 0;
+      width: 10%;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    color: var(--color-black);
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: var(--color-purple);
+  }
+}

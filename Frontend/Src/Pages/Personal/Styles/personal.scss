@@ -1,0 +1,40 @@
+.personal {
+  display: flex;
+  justify-content: space-between;
+
+  &__sidebar {
+    width: 250px;
+  }
+
+  &__events {
+    width: 400px;
+  }
+
+  &__main {
+    width: calc(100% - 650px);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
+
+.main {
+  $self: &;
+  --default-radius: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 32px;
+  @include glass();
+
+  &__page,
+  :deep(#{$self}__inner) {
+    flex: 1 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+  }
+}

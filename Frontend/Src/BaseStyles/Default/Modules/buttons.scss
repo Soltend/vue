@@ -1,0 +1,117 @@
+.button {
+  $self: &;
+
+  --btn-font-size: 14px;
+  --btn-background: transparent;
+  --btn-color: rgb(255, 255, 255);
+  --btn-height: 43px;
+
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: var(--btn-height);
+  border-radius: var(--default-radius);
+  box-shadow: var(--default-box-shadow);
+  background: var(--btn-background);
+
+  transition: box-shadow 0.2s ease-in, opacity 0.2s;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__label {
+    font-size: var(--btn-font-size);
+    line-height: normal;
+    letter-spacing: var(--default-letter-spzcing);
+    color: var(--btn-color);
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &--blue {
+    --btn-background: linear-gradient(140deg, rgb(99, 103, 233) 0%, rgb(119, 121, 232) 100%);
+  }
+
+  &--green {
+    --btn-background: linear-gradient(140deg, rgb(102, 188, 121) 0%, rgb(90, 168, 107) 100%);
+  }
+
+  &--simple {
+    --btn-height: auto;
+    padding-right: 0;
+    padding-left: 0;
+    box-shadow: none;
+
+    #{$self}__label {
+      text-decoration: underline;
+      color: var(--color-black);
+    }
+  }
+
+  &--popup {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &:hover {
+    #{$self}__label {
+      text-decoration: none;
+    }
+  }
+
+  &--table {
+    --default-radius: 10px;
+    position: relative;
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--delete {
+    background: var(--color-grey);
+
+    &::before {
+      background: url('~Assets/Icons/Table/delete.svg') top left/contain no-repeat;
+    }
+  }
+
+  &--edit {
+    &::before {
+      background: url('~Assets/Icons/Table/edit.svg') top left/contain no-repeat;
+    }
+  }
+
+  &--watch {
+    &::before {
+      background: url('~Assets/Icons/Table/eye.svg') top left/contain no-repeat;
+    }
+  }
+}

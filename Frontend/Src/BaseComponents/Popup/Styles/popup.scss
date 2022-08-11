@@ -1,0 +1,29 @@
+.popup {
+  position: absolute;
+  @include glass();
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 500px;
+  padding: 30px;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+
+  &--is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    overflow: visible;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+}

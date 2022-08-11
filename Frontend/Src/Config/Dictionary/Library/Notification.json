@@ -1,0 +1,12 @@
+{
+  "incorrect_auth": "E-mail или пароль введен неверно.",
+  "unknown_error": "Произошла неизвестная ошибка.",
+  "field_validation_error": "Заполните корректно обязательные поля.",
+  "user_already_exists": "Пользователь с таким E-mail уже существует.",
+  "registration_completed_successfully": "Регистрация прошла успешно.",
+  "cant_found_this_user": "Пользователь не найден.",
+  "new_password_sent_to_email": "Новый пароль отправлен на почту.",
+  "user_profile_was_changed": "Изменения были успешно сохранены.",
+  "incorrect_password_from_profile": "Старый пароль неверен.",
+  "company_was_changed": "Данные были успешно сохранены."
+}

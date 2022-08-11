@@ -1,0 +1,15 @@
+.lobby {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  flex-grow: 1;
+
+  &__wrapper {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

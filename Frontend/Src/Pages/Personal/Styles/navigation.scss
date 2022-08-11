@@ -1,0 +1,96 @@
+.navigation {
+  --primary-radius: 10px;
+
+  &__link {
+    $self: &;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-left: 70px;
+    width: 100%;
+
+    height: 60px;
+    margin-bottom: 5px;
+    border-left: 6px solid transparent;
+    border-top-right-radius: var(--default-radius);
+    border-bottom-right-radius: var(--default-radius);
+    background: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-black);
+    transition: background 0.2s ease-in, box-shadow 0.2s ease-in, border-color 0.2s ease-in;
+
+    &.router-link-active,
+    &:hover {
+      border-color: var(--color-purple);
+      box-shadow: var(--default-box-shadow);
+      background: var(--color-white);
+
+      &#{$self}--home {
+        border-color: transparent;
+        box-shadow: none;
+        background-color: transparent;
+
+        &:hover,
+        &.router-link-exact-active {
+          border-color: var(--color-purple);
+          box-shadow: var(--default-box-shadow);
+          background: var(--color-white);
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      width: 18px;
+      height: 18px;
+      transform: translateY(-50%);
+      transition: background 0.2s ease-in;
+    }
+
+    &--home {
+      &::before {
+        background: url('~Assets/Icons/Navigation/home.svg') top left/contain no-repeat;
+      }
+    }
+
+    &--calendar {
+      &::before {
+        background: url('~Assets/Icons/Navigation/calendar.svg') top left/contain no-repeat;
+      }
+    }
+
+    &--employees {
+      &::before {
+        background: url('~Assets/Icons/Navigation/employees.svg') top left/contain no-repeat;
+      }
+    }
+
+    &--company {
+      &::before {
+        background: url('~Assets/Icons/Navigation/company.svg') top left/contain no-repeat;
+      }
+    }
+
+    &--profile {
+      &::before {
+        background: url('~Assets/Icons/Navigation/profile.svg') top left/contain no-repeat;
+      }
+    }
+
+    &--faq {
+      &::before {
+        background: url('~Assets/Icons/Navigation/faq.svg') top left/contain no-repeat;
+      }
+    }
+
+    &--logout {
+      &::before {
+        background: url('~Assets/Icons/Navigation/logout.svg') top left/contain no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.DS_Store
+.idea
+.vscode
+
+/Frontend/.DS_Store
+/Frontend/node_modules
+/Frontend/dist
+/Frontend/yarn.lock
+/Frontend/yarn-error.log
+/Frontend/dist-ssr
+/Frontend/*.local
+
+/Backend/.DS_Store
+/Backend/node_modules
+/Backend/yarn.lock
+/Backend/yarn-error.log

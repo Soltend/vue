@@ -1,0 +1,9 @@
+{
+  "auth_title": "Вход в личный кабинет",
+  "email": "E-mail",
+  "password": "Пароль",
+  "name": "Имя",
+  "login": "Войти",
+  "registration": "Регистрация",
+  "recovery": "Восстановить пароль"
+}

@@ -1,0 +1,129 @@
+.field {
+  width: 100%;
+  $self: &;
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 14px;
+    height: 14px;
+    transform: translateY(-55%);
+  }
+
+  &--with-label {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    #{$self}__item {
+      width: calc(100% - 90px);
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+    font-size: 13px;
+    //width: 20%;
+    width: 90px;
+  }
+
+  &__item {
+    padding: 12px 20px;
+    width: 100%;
+    border: 1px solid var(--color-grey);
+    border-radius: var(--default-radius);
+    background-color: var(--color-light-grey);
+    transition: border-color 0.2s ease-in;
+
+    &:focus {
+      border-color: var(--color-green);
+    }
+
+    &::placeholder {
+      color: var(--color-grey);
+    }
+
+    &::input-placeholder,
+    &::placeholder,
+    &:placeholder,
+    &:input-placeholder {
+      transition: opacity 0.2s ease-in;
+    }
+
+    &:focus::input-placeholder {opacity: 0;}
+    &:focus::placeholder {opacity: 0;}
+    &:focus:placeholder {opacity: 0;}
+    &:focus:input-placeholder {opacity: 0;}
+
+    &[data-validate='true'] {
+      border-color: var(--color-green);
+    }
+
+    &[data-validate='false'] {
+      border-color: var(--color-red);
+    }
+  }
+
+  &--name,
+  &--email,
+  &--password,
+  &--passwordConfirm {
+    #{$self}__item {
+      padding-left: 44px;
+    }
+  }
+
+  &--email {
+    &::before {
+      background: url('~Assets/Icons/Auth/email.svg') top left/contain no-repeat;
+    }
+  }
+
+  &--password,
+  &--passwordConfirm {
+    &::before {
+      background: url('~Assets/Icons/Auth/password.svg') top left/contain no-repeat;
+    }
+  }
+
+  &--name {
+    &::before {
+      background: url('~Assets/Icons/Auth/user.svg') top left/contain no-repeat;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + #{$self}__checkbox-label {
+      background-color: rgb(102, 188, 121);
+      border-color: rgb(102, 188, 121);
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  &__checkbox-label {
+    padding: 6px 10px;
+    border: 1px solid var(--color-grey);
+    border-radius: var(--default-radius);
+    background-color: var(--color-light-grey);
+    transition: border-color 0.2s ease-in, background-color 0.2s ease-in, color 0.2s ease-in;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}

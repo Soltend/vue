@@ -1,0 +1,30 @@
+.scrollbar {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: hsla(0, 0%, 24%, 0.5);
+  scrollbar-arrow-color: hsl(0, 0%, 62%);
+  scrollbar-face-color: hsl(0, 0%, 62%);
+  scrollbar-track-color: transparent;
+
+  &--vertical {
+    overflow-x: hidden;
+  }
+
+  &--horizontal {
+    overflow-y: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: hsla(0, 0%, 24%, 0.5);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: hsla(0, 0%, 24%, 0.1);
+  }
+}
